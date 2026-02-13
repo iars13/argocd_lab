@@ -1,17 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nginx
+  name: nginx-helm
   namespace: argocd
 spec:
   project: lab
   source:
     repoURL: https://github.com/iars13/argocd_lab.git
     targetRevision: main
-    path: manifests/nginx
+    path: helm/nginx
+    helm:
+      valueFiles:
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: integracion
+    namespace: integracion-helm
   syncPolicy:
     automated:
       prune: true

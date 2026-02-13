@@ -1,4 +1,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: integracion-manifest
+  name: {{ .Values.namespace }}
