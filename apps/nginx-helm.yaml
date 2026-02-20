@@ -12,6 +12,7 @@ spec:
     helm:
       valueFiles:
         - values.yaml
+        - environment/integracion-helm/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: integracion-helm
