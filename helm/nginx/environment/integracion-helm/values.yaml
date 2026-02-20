@@ -4,7 +4,7 @@ replicaCount: 1
 
 image:
   repository: nginx
-  tag: latest
+  tag: stable-alpine3.23-perl
 
 service:
   port: 80
